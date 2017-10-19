@@ -1,0 +1,168 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumePoint}[1]{
+  \item\small{#1}
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubheadingExtended}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-3pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#5}
+    \end{tabular*}\vspace{-12pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-10pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/nikhil-sulegaon/}{\Huge Nikhil Sulegaon}} & Email : \href{mailto:nisu8311@colorado.edu}{nisu8311@colorado.edu}\\
+   \href{https://github.com/nikhilsu}{\faGithub \enspace https://github.com/nikhilsu} & Mobile : +1-720-491-9222 \\
+   \href{https://www.linkedin.com/in/nikhil-sulegaon/}{\faLinkedin \enspace https://www.linkedin.com/in/nikhil-sulegaon/}
+  
+\end{tabular*}
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheadingExtended
+      {University of Colorado Boulder}{Boulder, CO}
+      {Master of Science in Computer Science; expected May 2019}{Aug 2017 -- Present}
+      {Courses: Machine Learning, NLP, and Object Oriented Analysis \& Design Patterns}
+    \resumeSubheading
+      {BMS College of Engineering (Visvesvaraya Technological University)}{Bangalore, India}
+      {Bachelor's in Engineering, Information Science and Engineering;  GPA: 4.00}{Sep 2011 -- May 2015}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+    \setlength\itemsep{0em}
+    \item{
+     \textbf{Languages}{: Python, C\#, Ruby, Java, C++, PHP, and JavaScript.}
+    }
+    \item{
+     \textbf{Frameworks}{: Keras, Theano, Tensorflow, ASP.NET, Flask, Ruby on Rails, SpringMVC, ReactJs with Redux.}
+    }
+    \item{
+     \textbf{Databases}{: MS SQL Server, Postgres, MySQL, and MongoDB.}
+    }
+    \item{
+     \textbf{Electronic Prototyping}{: Arduino, Raspberry Pi, BeagleBoard, ARM mbed.}
+    }\vspace{-5pt}
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Colorado Boulder}{Boulder, CO}
+      {Teaching Assistant}{Sep 2017 - Present}
+      \resumeItemListStart
+          \resumePoint{Teaching \emph{Software tools and methodologies}--an industry focused course providing intensive training on building applications using core Agile principles and Test Driven Development.
+          }
+      \resumeItemListEnd
+    \resumeSubheading
+      {ThoughtWorks - \normalfont A staunch Agile company focused on quality of its deliverables}{Bangalore, India}
+      {Application Developer}{Aug 2015 - Aug 2017}
+      \resumeItemListStart
+      \resumeItem{Project Management Web Application(\normalfont{for the biggest consulting firm in the world)}}
+      {Predominantly worked on building a robust backend through TDD using C\#. Applied apt refactoring techniques to a legacy code base and increased the test coverage from 16\% to 65\%. Contributed heavily to optimizing extremely complex SQL queries thereby improving the performance of many key features by around 80\%.}
+      \resumeItem{Food-Supplies Management}{Worked on a stock management tool to help the pantry of the office plan fruits, vegetables and grocery supplies better in order to minimize wastage of food. This tool was built using the \emph{scklearn} and \emph{keras} libraries in Python}
+      \resumeItem{Danglay}{Developed and deployed a car pooling web application used by ThoughtWorks, Bangalore in a period of five weeks. Built using Ruby on Rails.}
+      \resumePoint{Proficient in core Agile software development practices such as Test Driven Development, Continuous Integration and Continuous Delivery. Experienced in writing highly scalable and maintainable production code.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {FreeLancer - \normalfont{Embedded System Prototyping}}{Bangalore, India}
+      {Designed electronic prototypes of various Assistive Technology and Home Automation devices.}{Oct 2014 - June 2015}
+  \resumeSubHeadingListEnd
+
+%
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Object 3D Pose Estimation(\normalfont{Ongoing})}
+      {Using Neural Nets to eliminate the use of industry grade motion capture cameras to deduce a dynamic object\rq s 3D location and rotation(roll, pitch, yaw). This information is then piped to an AR head-mounted display to generate real and virtual object interactions.}
+    \resumeSubItem{Navisys}
+      {Designed an embedded system fitted into a wearable jacket to help provide visually impaired users turn by turn navigation with dynamic obstacle detection. Ultrasonic sensors - the crux of the obstacle detection unit, were later replaced by a Convolution Neural Net to increase performance by 20\%.}
+    \resumeSubHeadingListEnd
+\end{document}
