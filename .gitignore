@@ -1,0 +1,4 @@
+.idea/*
+.DS_Store
+*/__pycache__
+glove.6B.100d.txt
