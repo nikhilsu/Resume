@@ -48,6 +48,11 @@
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
+\newcommand{\resumeItemWithMoreVSpace}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-0.5pt}}
+  }
+}
 \newcommand{\resumePoint}[1]{
   \item\small{#1}
 }
@@ -72,15 +77,6 @@
     \end{tabular*}\vspace{-12pt}
 }
 
-\newcommand{\resumeSubheadingWithDescription}[5]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{2pt}
-    \textit{\small#5}\vspace{0pt}
-}
-
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
@@ -90,6 +86,8 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-10pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-4pt}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeInnerItemListStart}{\begin{itemize}\vspace{-1pt}}
+\newcommand{\resumeInnerItemListEnd}{\end{itemize}\vspace{0pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -153,15 +151,19 @@
           \resumePoint{This position also involves guiding and advising students on their academic and personal projects.
           }
       \resumeItemListEnd
-    \resumeSubheadingWithDescription
+    \resumeSubheading
       {ThoughtWorks - \normalfont A staunch Agile company focused on quality of its deliverables}{Bangalore, India}
       {Application Developer}{Aug 2015 - Aug 2017}
-      {Developed software using Agile practices like Test Driven Development, Continuous Integration and Delivery.}
       \resumeItemListStart
-      \resumeItem{Project Management Tool(C\#, Silverlight, ASP.NET)(\normalfont{for the largest consulting firm in the world)}}
-      {Predominantly worked on building a robust backend through TDD using C\#. Applied appropriate refactoring techniques to a legacy code base and increased the test coverage from 16\% to 65\%. Contributed to optimizing extremely complex SQL queries thereby improving the performance of many key features by around 80\%.}
-      \resumeItem{Food-Supplies Management(Python, Sklearn, Keras)}{Worked on a stock management tool to help the pantry of the office plan the supply of fruits, vegetables, and grocery better in order to minimize wastage of food.}
-      \resumeItem{Danglay(Ruby, Ruby on Rails)}{Built a scalable carpooling web application using Ruby on Rails to solve the problem of commute faced by numerous employees at ThoughtWorks.}
+      \resumeItem {Project Management Tool(C\#, Silverlight, ASP.NET)}
+          {A Multi-tenant SaaS Application having about 2000 tenants and 2000-5000 users per tenant in production.
+          \resumeInnerItemListStart
+            \resumePoint {Worked on building a robust backend through Test Driven Development using C\#.}
+            \resumePoint {Refactored the legacy code base and increased the test coverage from 16\% to 65\%.}
+            \resumePoint {Optimized complex SQL queries to improve performance of key features by around 80\%.}
+          \resumeInnerItemListEnd}
+        \resumeItemWithMoreVSpace {Food-Supplies Management(Python, Sklearn, Keras)}{A stock management tool to help the pantry of the office plan the supply of fruits, vegetables, and grocery in order to minimize wastage of food.}
+      \resumeItem {Danglay(Ruby, Ruby on Rails)}{A scalable carpooling web application using Ruby on Rails to solve the problem of commute faced by numerous employees at ThoughtWorks.}
       \resumeItemListEnd
     \resumeSubheading
       {FreeLancing - \normalfont{Embedded System Prototyping}}{Bangalore, India}
@@ -180,7 +182,7 @@
     \resumeSubItem{Object 3D Pose Estimation(Python, Tensorflow, C\#, Unity)}
       {Using Neural Nets to deduce a dynamic object\rq s 3D location(x, y, z) and rotation(roll, pitch, yaw). This information is piped to an AR head-mounted display to generate real and virtual object interactions. \textbf{Links:}
       \href{https://drive.google.com/file/d/1kCepKQxR73tUTLuvmd1YL3sIbj1GxDdc/view?usp=sharing}{\textit{Demo}}, \href{https://drive.google.com/file/d/1mRwSJ8p2-g-gtBGl1A8seRB8SojWQphm/view?usp=sharing}{\textit{Paper(Report)}}, \href{https://github.com/nikhilsu/Object-location-detection}{\textit{GitHub}}.}
-    \resumeSubItem{Navisys(Java, Android, Python, C, OpenCV)}
+    \resumeSubItem{Navisys(Java, Android, Python, C++, OpenCV)}
       {Designed an embedded system, fitted into a wearable jacket, that provided turn-by-turn navigation with dynamic obstacle detection to visually impaired users. Ultrasonic sensors - the crux of the obstacle detection unit, were later replaced by a Convolution Neural Net to increase performance by 20\%. \textbf{Links:}
       \href{https://drive.google.com/file/d/1bFHeZ7-7uwZ0spir3YQ7r0maWdLteEtu/view?usp=sharing}{\textit{Report}},
       \href{https://drive.google.com/file/d/1JWB67U2jjTG7cXZFVjRPVGKsv-rRhgUQ/view?usp=sharing}{\textit{Synopsis}}.}
