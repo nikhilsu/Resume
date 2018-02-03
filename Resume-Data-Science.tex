@@ -39,43 +39,38 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-5pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+}{}{0em}{}[\color{black}\titlerule\vspace{-3pt}]
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
+  \linespread{1.2}
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
+      \textbf{#1}{: #2}
+    }
 }
-\newcommand{\resumeItemWithMoreVSpace}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-0.5pt}}
-  }
-}
+
 \newcommand{\resumePoint}[1]{
+  \linespread{1.2}
   \item\small{#1}
 }
 
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+\newcommand{\resumeExperienceSubheading}[5]{
+  \vspace{-3pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-2pt}
+      \textbf{#1} \normalfont{\small#2} - \textbf{#3}\normalfont{#4} & #5 \\
+    \end{tabular*}\vspace{-4pt}
 }
 
-\newcommand{\resumeSubheadingExtended}[5]{
-  \vspace{-1pt}\item
+\newcommand{\resumeSubheadingExtended}[7]{
+  \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-3pt}
+      \textbf{\small#3} in \textit{#4}; \textbf{#5} & \textit{\small #6} \\
+    \end{tabular*}
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textit{\small#5}
-    \end{tabular*}\vspace{-12pt}
-}
+    \textit{\small#7}\vspace{-3pt}
+    \end{tabular*}}
 
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -83,11 +78,11 @@
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-10pt}}
-\newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-4pt}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\resumeInnerItemListStart}{\begin{itemize}\vspace{-1pt}}
-\newcommand{\resumeInnerItemListEnd}{\end{itemize}\vspace{0pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-14pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeInnerItemListStart}{\begin{itemize}}
+\newcommand{\resumeInnerItemListEnd}{\end{itemize}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,20 +95,20 @@
   \textbf{\href{https://www.linkedin.com/in/nikhil-sulegaon/}{\Huge Nikhil Sulegaon}} & \faMapMarker \enspace 2995 Glenwood Dr APT 113 Boulder CO USA 80301\\[3pt]
    \href{https://github.com/nikhilsu}{\faGithub \enspace https://github.com/nikhilsu} & \faEnvelopeO \enspace \href{mailto:nisu8311@colorado.edu}{nisu8311@colorado.edu} \\
    \href{https://www.linkedin.com/in/nikhil-sulegaon/}{\faLinkedin \enspace https://www.linkedin.com/in/nikhil-sulegaon/} & \faPhone \enspace \href{tel:+1-720-491-9222}{+1-720-491-9222}
-  
-\end{tabular*}\vspace{-8pt}
+   \vspace{-8pt}
+\end{tabular*}
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheadingExtended
       {University of Colorado Boulder}{Boulder, CO}
-      {Master of Science in Computer Science;  GPA: 3.8/4.0}{Aug 2017 -- Present (Expected: May 2019)}
+      {Master of Science}{Computer Science}{GPA: 3.8/4.0}{Aug 2017 -- Present (Expected: May 2019)}
       {Relevant courses: Machine Learning, NLP, Probabilistic models for Machine learning, and Computer Vision.}
     \resumeSubheadingExtended
       {BMS College of Engineering}{Bangalore, India}
-      {Bachelor of Engineering in Information Science and Engineering;  GPA: 8.92/10.0}{Sep 2011 -- May 2015}
+      {Bachelor of Engineering}{Information Science and Engineering}{GPA: 8.92/10.0}{Sep 2011 -- May 2015}
       {Relevant courses: Data Structures using C, Design and Analysis of Algorithms, Operating Systems and Databases}
-  \resumeSubHeadingListEnd\vspace{6pt}
+  \resumeSubHeadingListEnd
 
 
 %--------PROGRAMMING SKILLS------------
@@ -124,53 +119,45 @@
      \textbf{Languages}{: Python, C\#, Java, Ruby, C++, C, PHP, and NodeJs.}
     }
     \item{
-     \textbf{Frameworks}{: Keras, Theano, Tensorflow, ASP.NET, Flask, Ruby on Rails, SpringMVC, ReactJs with Redux.}
+     \textbf{Frameworks}{: Tensorflow, Keras, Theano, ASP.NET, Flask, Ruby on Rails, SpringMVC, ReactJs with Redux.}
     }
     \item{
      \textbf{Databases}{: MS SQL Server, Postgres, MySQL, and MongoDB.}
     }
     \item{
      \textbf{Others}{: Android, Git, AWS, Heroku, CI, Docker, HTML/CSS, JavaScript, Shell scripting, and Powershell.}
-    }\vspace{-5pt}
+    }
  \resumeSubHeadingListEnd
-
 
 %-------------------------------------------
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Colorado Boulder}{Boulder, CO}
-      {Teaching Assistant - Software tools and methodologies}{Sep 2017 - Present}
+    \resumeExperienceSubheading
+      {Teaching Assistant}{\href{https://www.colorado.edu/cs/csci-3308-software-development-methods-and-tools}{(S/W Dev Methods \& Tools)}}{University of Colorado Boulder}{}{Sep 2017 - Present}
       \resumeItemListStart
-          \resumePoint{Teaching 60 students, full stack development and deployment of applications using core Agile principles and TDD.
-          }
-          \resumePoint{Training students on technologies like Shell Scripting, HTML/CSS, JS, Git, REST, MySQL, PHP, CI, and Heroku.
-          }
-          \resumePoint{This position also involves guiding and advising students on their academic and personal projects.
-          }
+          \resumePoint{Teaching 60 students, full stack development and deployment of applications using core Agile principles and TDD.}
+          \resumePoint{Training students on technologies like Shell Scripting, HTML/CSS, JS, Git, REST, MySQL, PHP, CI, and Heroku.}
       \resumeItemListEnd
-    \resumeSubheading
-      {ThoughtWorks - \normalfont A staunch Agile company focused on quality of its deliverables}{Bangalore, India}
-      {Application Developer}{Aug 2015 - Aug 2017}
+    \resumeExperienceSubheading
+      {Application Developer}{}{ThoughtWorks}{, Bangalore, India}{Aug 2015 - Aug 2017}
       \resumeItemListStart
-      \resumeItem {Project Management Tool(C\#, Silverlight, ASP.NET)}
-          {A Multi-tenant SaaS Application having about 2000 tenants and 2000-5000 users per tenant in production.
+      \resumeItem {Project Management Tool (C\#, Silverlight, ASP.NET)}
+          {A Multi-tenant SaaS application having about 2000 tenants and 2000-5000 users per tenant in production.
           \resumeInnerItemListStart
             \resumePoint {Worked on building a robust backend through Test Driven Development using C\#.}
             \resumePoint {Refactored the legacy code base and increased the test coverage from 16\% to 65\%.}
-            \resumePoint {Optimized complex SQL queries to improve performance of key features by around 80\%.}
+            \resumePoint {Optimized complex SQL queries to improve the performance of key features by around 80\%.}
           \resumeInnerItemListEnd}
-        \resumeItemWithMoreVSpace {Food-Supplies Management(Python, Sklearn, Keras)}{A stock management tool to help the pantry of the office plan the supply of fruits, vegetables, and grocery in order to minimize wastage of food.}
-      \resumeItem {Danglay(Ruby, Ruby on Rails)}{A scalable carpooling web application using Ruby on Rails to solve the problem of commute faced by numerous employees at ThoughtWorks.}
+        \resumeItem {Food-Supplies Management (Python, Sklearn, Keras)}{A stock management tool to help the pantry of the office plan the supply of fruits, vegetables, and grocery in order to minimize wastage of food.}
+      \resumeItem {Danglay (Ruby, Ruby on Rails)}{A scalable carpooling web application using Ruby on Rails to solve the problem of commute faced by numerous employees at ThoughtWorks.}
       \resumeItemListEnd
-    \resumeSubheading
-      {FreeLancing - \normalfont{Embedded System Prototyping}}{Bangalore, India}
-      {Designed electronic prototypes of various Assistive Technology and Home Automation devices.}{Oct 2014 - June 2015}
+    \resumeExperienceSubheading
+      {Freelancer}{(Embedded System Prototyping)}{Self Employed}{, Bangalore, India}{Oct 2014 - June 2015}
       \resumeItemListStart
-          \resumeItem{EMG Controlled Wheelchair(Arduino, C)}{A wheelchair which was controlled by an electromyograph, aimed at helping paraplegic patients move around. This system could also be controlled by a voice recognition unit.}
-          \resumeItem{Surveillance System(Java, Android, Python, C)}{Security system that enabled the owner to control the entrance gates and lockdown the house. This system also provided live surveillance of the house on a smart-phone.}
+          \resumeItem{EMG Controlled Wheelchair (Arduino, C)}{A wheelchair which was controlled by an electromyograph, aimed at helping paraplegic patients move around. This system could also be controlled by a voice recognition unit.}
+          \resumeItem{Surveillance System (Java, Android, Python, C)}{Security system that enabled the owner to control the entrance gates and lockdown the house. This system also provided live surveillance of the house on a smart-phone.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -179,19 +166,21 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{Object 3D Pose Estimation(Python, Tensorflow, C\#, Unity)}
-      {Using Neural Nets to deduce a dynamic object\rq s 3D location(x, y, z) and rotation(roll, pitch, yaw). This information is piped to an AR head-mounted display to generate real and virtual object interactions. \textbf{Links:}
-      \href{https://drive.google.com/file/d/1kCepKQxR73tUTLuvmd1YL3sIbj1GxDdc/view?usp=sharing}{\textit{Demo}}, \href{https://drive.google.com/file/d/1mRwSJ8p2-g-gtBGl1A8seRB8SojWQphm/view?usp=sharing}{\textit{Paper(Report)}}, \href{https://github.com/nikhilsu/Object-location-detection}{\textit{GitHub}}.}
-    \resumeSubItem{Navisys(Java, Android, Python, C++, OpenCV)}
-      {Designed an embedded system, fitted into a wearable jacket, that provided turn-by-turn navigation with dynamic obstacle detection to visually impaired users. Ultrasonic sensors - the crux of the obstacle detection unit, were later replaced by a Convolution Neural Net to increase performance by 20\%. \textbf{Links:}
+    \resumeSubItem{Object 3D Pose Estimation (Python, Tensorflow, C\#, Unity)}
+      {Using Convolutional Neural Nets to predict a dynamic object\rq s 3D location(x, y, z) and rotation(roll, pitch, yaw). This information is piped to an AR head-mounted display to generate real and virtual object interactions. \textbf{Links:}
+      \href{https://drive.google.com/file/d/1kCepKQxR73tUTLuvmd1YL3sIbj1GxDdc/view?usp=sharing}{\textit{Demo}}, \href{https://drive.google.com/file/d/1mRwSJ8p2-g-gtBGl1A8seRB8SojWQphm/view?usp=sharing}{\textit{Paper}}, \href{https://github.com/nikhilsu/Object-location-detection}{\textit{GitHub}}.}
+    \resumeSubItem{Navisys (Java, Android, Python, C++, OpenCV)}
+      {Designed an embedded system, fitted into a wearable jacket, that provided turn-by-turn navigation with dynamic obstacle detection to visually impaired users. Ultrasonic sensors were later replaced by a Convolution Neural Net to increase performance by 20\%. \textbf{Links:}
       \href{https://drive.google.com/file/d/1bFHeZ7-7uwZ0spir3YQ7r0maWdLteEtu/view?usp=sharing}{\textit{Report}},
       \href{https://drive.google.com/file/d/1JWB67U2jjTG7cXZFVjRPVGKsv-rRhgUQ/view?usp=sharing}{\textit{Synopsis}}.}
-    \resumeSubItem{\href{https://www.dropbox.com/s/grnct56cpmsiw6c/20160208_234825.mp4?dl=0}{Teacher\rq s cube(Python, Bash)}}
+    \resumeSubItem{\href{https://www.dropbox.com/s/grnct56cpmsiw6c/20160208_234825.mp4?dl=0}{Teacher\rq s cube (Python, Bash)}}
       {Electronic mnemonic cubes, representing alphabets of a language, that pronounced the word formed when arranged one beside the other. Aimed to help dyslexic children formulate and pronounce words.}
     \resumeSubHeadingListEnd
 
+\vspace{5pt}
 \section{Achievements}
+\vspace{-5pt}
   \resumeSubHeadingListStart
-    \resumePoint{Won the 'Best Research Project' award at the IEEE International Advance Computing Conference 2015, held at B.M.S College of Engineering. The project also featured in the \href{https://drive.google.com/open?id=0B0vNhKZyi8qyam1fQ3lfaE1hMkE}{\emph{local newspaper(link)}} for its novel approach of implementation.}
+    \resumePoint{'Best Research Undergrad Project' award at an IEEE Conference 2015. The project also featured in the \href{https://drive.google.com/open?id=0B0vNhKZyi8qyam1fQ3lfaE1hMkE}{\emph{newspaper(link)}}.}
   \resumeSubHeadingListEnd
 \end{document}
