@@ -45,7 +45,7 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
-  \linespread{1.2}
+  \linespread{1.1}
   \item\small{
       \textbf{#1}{: #2}
     }
@@ -67,10 +67,10 @@
   \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textbf{\small#3} in \textit{#4}; \textbf{#5} & \textit{\small #6}
+      \textbf{\small#3} in \textit{#4}; \textbf{#5} & \textit{\small #6} 
     \end{tabular*}
     \ifthenelse{\isempty{#7}}%
-    {\vspace{-7pt}}% if #1 is empty
+    {}% if #1 is empty
     {\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textit{\small#7}
     \end{tabular*}
@@ -86,8 +86,8 @@
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-14pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
-\newcommand{\resumeInnerItemListStart}{\begin{itemize}}
-\newcommand{\resumeInnerItemListEnd}{\end{itemize}}
+\newcommand{\resumeInnerItemListStart}{\begin{itemize}\vspace{-1pt}}
+\newcommand{\resumeInnerItemListEnd}{\end{itemize}\vspace{2pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,7 +108,7 @@
     \resumeSubheadingExtended
       {University of Colorado Boulder}{Boulder, CO}
       {Master of Science}{Computer Science}{GPA: 3.8/4.0}{Aug 2017 -- Present (Expected: May 2019)}
-      {Relevant courses: Machine Learning, NLP, Object Oriented Analysis and Design, and Computer Vision.}
+      {Relevant courses: Machine Learning, NLP, Probabilistic Models for ML, Computer Vision, and, Object Oriented Design.}
     \resumeSubheadingExtended
       {BMS College of Engineering}{Bangalore, India}
       {Bachelor of Engineering}{Information Science and Engineering}{GPA: 8.92/10.0}{Sep 2011 -- May 2015}
@@ -124,7 +124,7 @@
      \textbf{Languages}{: Python, C\#, Java, Ruby, C++, C, PHP, MATLAB, and NodeJs.}
     }
     \item{
-     \textbf{Frameworks}{: Tensorflow, Keras, Theano, ASP.NET, Flask, Ruby on Rails, SpringMVC, ReactJs with Redux.}
+     \textbf{Frameworks}{: Tensorflow, Keras, ASP.NET, Flask, Ruby on Rails, SpringMVC, ReactJs with Redux.}
     }
     \item{
      \textbf{Databases}{: MS SQL Server, Postgres, MySQL, and MongoDB.}
@@ -133,7 +133,6 @@
      \textbf{Others}{: Android, Git, AWS, Heroku, CI, Docker, HTML/CSS, JavaScript, Shell scripting, and Powershell.}
     }
  \resumeSubHeadingListEnd
-
 
 %-------------------------------------------
 
@@ -172,22 +171,23 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{Agile board (Java, SpringMVC)}
-      {Developed an Agile board for an OOP-design cum refactoring exercise. The backend was implemented by incorporating various Design Patterns and best practices of Java, SpringMVC, and OOP. Also introduced a \href{https://github.com/nikhilsu/Agile-board/blob/master/src/main/java/com/prorg/helper/result/Response.java}{\emph{custom design pattern}}. \textbf{Links:}
-      \href{https://prorg.herokuapp.com}{\textit{App}}, \href{https://github.com/nikhilsu/Agile-board}{\textit{GitHub}}.}
     \resumeSubItem{Object 3D Pose Estimation (Python, Tensorflow, C\#, Unity)}
-      {Using CNN to predict a dynamic object\rq s 3D location(x, y, z) and rotation(roll, pitch, yaw) to generate real and virtual object interactions in an AR-Headmount display. \textbf{Links:}
+      {Using a CNN to predict an object\rq s 3D pose (x, y, z, roll, pitch, yaw) to generate real and virtual object interactions in a Hololens. \textbf{Links:}
       \href{https://drive.google.com/file/d/1kCepKQxR73tUTLuvmd1YL3sIbj1GxDdc/view?usp=sharing}{\textit{Demo}}, \href{https://drive.google.com/file/d/1mRwSJ8p2-g-gtBGl1A8seRB8SojWQphm/view?usp=sharing}{\textit{Paper}}, \href{https://github.com/nikhilsu/Object-location-detection}{\textit{GitHub}}.}
+      \resumeSubItem{Agile board (Java, SpringMVC)}
+      {A web based Agile board developed for an OOP-design cum refactoring exercise. Devised a \href{https://github.com/nikhilsu/Agile-board/blob/master/src/main/java/com/prorg/helper/result/Response.java}{\emph{custom design pattern}} as part of the project implementation. \textbf{Links:}
+      \href{https://prorg.herokuapp.com}{\textit{App}}, \href{https://github.com/nikhilsu/Agile-board}{\textit{GitHub}}.}
     \resumeSubItem{Navisys (Java, Android, Python, C++, OpenCV)}
-      {Designed an embedded system, fitted into a wearable jacket, that provided turn-by-turn navigation with dynamic obstacle detection to visually impaired users. A CNN was later added to the system to increase performance by 20\%. \textbf{Links:}
+      {An embedded system fitted into a jacket that provided turn-by-turn navigation with human and obstacle detection to visually impaired users. \textbf{Links:}
       \href{https://drive.google.com/file/d/1bFHeZ7-7uwZ0spir3YQ7r0maWdLteEtu/view?usp=sharing}{\textit{Report}},
       \href{https://drive.google.com/file/d/1JWB67U2jjTG7cXZFVjRPVGKsv-rRhgUQ/view?usp=sharing}{\textit{Synopsis}}.}
+    \resumeSubItem{\href{https://www.dropbox.com/s/grnct56cpmsiw6c/20160208_234825.mp4?dl=0}{Teacher\rq s cube (Python, Bash)}}
+      {Electronic mnemonic cubes, representing alphabets of a language, that pronounced the word formed when arranged one beside the other. Aimed to help dyslexic children formulate and pronounce words.}
     \resumeSubHeadingListEnd
 
 \vspace{5pt}
 \section{Achievements}
-\vspace{-5pt}
   \resumeSubHeadingListStart
-    \resumePoint{'Best Research Undergrad Project' award at IEEE Conference 2015. The project also featured in the \href{https://drive.google.com/open?id=0B0vNhKZyi8qyam1fQ3lfaE1hMkE}{\emph{newspaper(link)}}.}
+    \resumePoint{'Best Research Project' award at the IEEE International Advance Computing Conference 2015, held at B.M.S College of Engineering. The project also featured in the \href{https://drive.google.com/open?id=0B0vNhKZyi8qyam1fQ3lfaE1hMkE}{\emph{newspaper(link)}} for its novel approach of implementation.}
   \resumeSubHeadingListEnd
 \end{document}
