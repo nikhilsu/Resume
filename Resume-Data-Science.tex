@@ -16,6 +16,7 @@
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{fontawesome}
+\usepackage{xifthen}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -66,11 +67,15 @@
   \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textbf{\small#3} in \textit{#4}; \textbf{#5} & \textit{\small #6} \\
+      \textbf{\small#3} in \textit{#4}; \textbf{#5} & \textit{\small #6}
     \end{tabular*}
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textit{\small#7}\vspace{-3pt}
-    \end{tabular*}}
+    \ifthenelse{\isempty{#7}}%
+    {\vspace{-7pt}}% if #1 is empty
+    {\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#7}
+    \end{tabular*}
+    \vspace{-5pt}}
+}
 
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -107,7 +112,7 @@
     \resumeSubheadingExtended
       {BMS College of Engineering}{Bangalore, India}
       {Bachelor of Engineering}{Information Science and Engineering}{GPA: 8.92/10.0}{Sep 2011 -- May 2015}
-      {Relevant courses: Data Structures using C, Design and Analysis of Algorithms, Operating Systems and Databases}
+      {}
   \resumeSubHeadingListEnd
 
 
@@ -116,7 +121,7 @@
  \resumeSubHeadingListStart
     \setlength\itemsep{0em}
     \item{
-     \textbf{Languages}{: Python, C\#, Java, Ruby, C++, C, PHP, and NodeJs.}
+     \textbf{Languages}{: Python, C\#, Java, Ruby, C++, C, PHP, MATLAB, and NodeJs.}
     }
     \item{
      \textbf{Frameworks}{: Tensorflow, Keras, Theano, ASP.NET, Flask, Ruby on Rails, SpringMVC, ReactJs with Redux.}
@@ -144,10 +149,10 @@
       {Application Developer}{}{ThoughtWorks}{, Bangalore, India}{Aug 2015 - Aug 2017}
       \resumeItemListStart
       \resumeItem {Project Management Tool (C\#, Silverlight, ASP.NET)}
-          {A Multi-tenant SaaS application having about 2000 tenants and 2000-5000 users per tenant in production.
+          {A Multi-tenant SaaS application having about 2000 tenants and 2000-5000 users per tenant.
           \resumeInnerItemListStart
-            \resumePoint {Worked on building a robust backend through Test Driven Development using C\#.}
-            \resumePoint {Refactored the legacy code base and increased the test coverage from 16\% to 65\%.}
+            \resumePoint {Spearheaded the re-architecture of the legacy application using Test Driven Development for scale.}
+            \resumePoint {Refactored the code base by introducing design patterns. Also increased the test coverage from 16\% to 65\%.}
             \resumePoint {Optimized complex SQL queries to improve the performance of key features by around 80\%.}
           \resumeInnerItemListEnd}
         \resumeItem {Food-Supplies Management (Python, Sklearn, Keras)}{A stock management tool to help the pantry of the office plan the supply of fruits, vegetables, and grocery in order to minimize wastage of food.}
@@ -167,10 +172,10 @@
 \section{Projects}
   \resumeSubHeadingListStart
     \resumeSubItem{Object 3D Pose Estimation (Python, Tensorflow, C\#, Unity)}
-      {Using Convolutional Neural Nets to predict a dynamic object\rq s 3D location(x, y, z) and rotation(roll, pitch, yaw). This information is piped to an AR head-mounted display to generate real and virtual object interactions. \textbf{Links:}
+      {Using CNN to predict a dynamic object\rq s 3D location(x, y, z) and rotation(roll, pitch, yaw) to generate real and virtual object interactions in an AR-Headmount display. \textbf{Links:}
       \href{https://drive.google.com/file/d/1kCepKQxR73tUTLuvmd1YL3sIbj1GxDdc/view?usp=sharing}{\textit{Demo}}, \href{https://drive.google.com/file/d/1mRwSJ8p2-g-gtBGl1A8seRB8SojWQphm/view?usp=sharing}{\textit{Paper}}, \href{https://github.com/nikhilsu/Object-location-detection}{\textit{GitHub}}.}
     \resumeSubItem{Navisys (Java, Android, Python, C++, OpenCV)}
-      {Designed an embedded system, fitted into a wearable jacket, that provided turn-by-turn navigation with dynamic obstacle detection to visually impaired users. Ultrasonic sensors were later replaced by a Convolution Neural Net to increase performance by 20\%. \textbf{Links:}
+      {Designed an embedded system, fitted into a wearable jacket, that provided turn-by-turn navigation with dynamic obstacle detection to visually impaired users. A CNN was later added to the system to increase performance by 20\%. \textbf{Links:}
       \href{https://drive.google.com/file/d/1bFHeZ7-7uwZ0spir3YQ7r0maWdLteEtu/view?usp=sharing}{\textit{Report}},
       \href{https://drive.google.com/file/d/1JWB67U2jjTG7cXZFVjRPVGKsv-rRhgUQ/view?usp=sharing}{\textit{Synopsis}}.}
     \resumeSubItem{\href{https://www.dropbox.com/s/grnct56cpmsiw6c/20160208_234825.mp4?dl=0}{Teacher\rq s cube (Python, Bash)}}
@@ -181,6 +186,6 @@
 \section{Achievements}
 \vspace{-5pt}
   \resumeSubHeadingListStart
-    \resumePoint{'Best Research Undergrad Project' award at an IEEE Conference 2015. The project also featured in the \href{https://drive.google.com/open?id=0B0vNhKZyi8qyam1fQ3lfaE1hMkE}{\emph{newspaper(link)}}.}
+    \resumePoint{'Best Research Undergrad Project' award at IEEE Conference 2015. The project also featured in the \href{https://drive.google.com/open?id=0B0vNhKZyi8qyam1fQ3lfaE1hMkE}{\emph{newspaper(link)}}.}
   \resumeSubHeadingListEnd
 \end{document}

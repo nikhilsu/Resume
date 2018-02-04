@@ -16,6 +16,7 @@
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{fontawesome}
+\usepackage{xifthen}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -44,7 +45,7 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
-  \linespread{1.1}
+  \linespread{1.2}
   \item\small{
       \textbf{#1}{: #2}
     }
@@ -66,11 +67,15 @@
   \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textbf{\small#3} in \textit{#4}; \textbf{#5} & \textit{\small #6} \\
+      \textbf{\small#3} in \textit{#4}; \textbf{#5} & \textit{\small #6}
     \end{tabular*}
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textit{\small#7}\vspace{-3pt}
-    \end{tabular*}}
+    \ifthenelse{\isempty{#7}}%
+    {\vspace{-7pt}}% if #1 is empty
+    {\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#7}
+    \end{tabular*}
+    \vspace{-5pt}}
+}
 
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -95,8 +100,8 @@
   \textbf{\href{https://www.linkedin.com/in/nikhil-sulegaon/}{\Huge Nikhil Sulegaon}} & \faMapMarker \enspace 2995 Glenwood Dr APT 113 Boulder CO USA 80301\\[3pt]
    \href{https://github.com/nikhilsu}{\faGithub \enspace https://github.com/nikhilsu} & \faEnvelopeO \enspace \href{mailto:nisu8311@colorado.edu}{nisu8311@colorado.edu} \\
    \href{https://www.linkedin.com/in/nikhil-sulegaon/}{\faLinkedin \enspace https://www.linkedin.com/in/nikhil-sulegaon/} & \faPhone \enspace \href{tel:+1-720-491-9222}{+1-720-491-9222}
-  
-\end{tabular*}\vspace{-8pt}
+   \vspace{-8pt}
+\end{tabular*}
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
@@ -107,8 +112,8 @@
     \resumeSubheadingExtended
       {BMS College of Engineering}{Bangalore, India}
       {Bachelor of Engineering}{Information Science and Engineering}{GPA: 8.92/10.0}{Sep 2011 -- May 2015}
-      {Relevant courses: Data Structures using C, Design and Analysis of Algorithms, Operating Systems and Databases}
-  \resumeSubHeadingListEnd\vspace{6pt}
+      {}
+  \resumeSubHeadingListEnd
 
 
 %--------PROGRAMMING SKILLS------------
@@ -116,17 +121,17 @@
  \resumeSubHeadingListStart
     \setlength\itemsep{0em}
     \item{
-     \textbf{Languages}{: Python, C\#, Java, Ruby, C++, C, PHP, and NodeJs.}
+     \textbf{Languages}{: Python, C\#, Java, Ruby, C++, C, PHP, MATLAB, and NodeJs.}
     }
     \item{
-     \textbf{Frameworks}{: Keras, Theano, Tensorflow, ASP.NET, Flask, Ruby on Rails, SpringMVC, ReactJs with Redux.}
+     \textbf{Frameworks}{: Tensorflow, Keras, Theano, ASP.NET, Flask, Ruby on Rails, SpringMVC, ReactJs with Redux.}
     }
     \item{
      \textbf{Databases}{: MS SQL Server, Postgres, MySQL, and MongoDB.}
     }
     \item{
      \textbf{Others}{: Android, Git, AWS, Heroku, CI, Docker, HTML/CSS, JavaScript, Shell scripting, and Powershell.}
-    }\vspace{-5pt}
+    }
  \resumeSubHeadingListEnd
 
 
@@ -138,19 +143,17 @@
     \resumeExperienceSubheading
       {Teaching Assistant}{\href{https://www.colorado.edu/cs/csci-3308-software-development-methods-and-tools}{(S/W Dev Methods \& Tools)}}{University of Colorado Boulder}{}{Sep 2017 - Present}
       \resumeItemListStart
-          \resumePoint{Teaching 60 students, full stack development and deployment of applications using core Agile principles and TDD.
-          }
-          \resumePoint{Training students on technologies like Shell Scripting, HTML/CSS, JS, Git, REST, MySQL, PHP, CI, and Heroku.
-          }
+          \resumePoint{Teaching 60 students, full stack development and deployment of applications using core Agile principles and TDD.}
+          \resumePoint{Training students on technologies like Shell Scripting, HTML/CSS, JS, Git, REST, MySQL, PHP, CI, and Heroku.}
       \resumeItemListEnd
     \resumeExperienceSubheading
       {Application Developer}{}{ThoughtWorks}{, Bangalore, India}{Aug 2015 - Aug 2017}
       \resumeItemListStart
       \resumeItem {Project Management Tool (C\#, Silverlight, ASP.NET)}
-          {A Multi-tenant SaaS application having about 2000 tenants and 2000-5000 users per tenant in production.
+          {A Multi-tenant SaaS application having about 2000 tenants and 2000-5000 users per tenant.
           \resumeInnerItemListStart
-            \resumePoint {Worked on building a robust backend through Test Driven Development using C\#.}
-            \resumePoint {Refactored the legacy code base and increased the test coverage from 16\% to 65\%.}
+            \resumePoint {Spearheaded the re-architecture of the legacy application using Test Driven Development for scale.}
+            \resumePoint {Refactored the code base by introducing design patterns. Also increased the test coverage from 16\% to 65\%.}
             \resumePoint {Optimized complex SQL queries to improve the performance of key features by around 80\%.}
           \resumeInnerItemListEnd}
         \resumeItem {Food-Supplies Management (Python, Sklearn, Keras)}{A stock management tool to help the pantry of the office plan the supply of fruits, vegetables, and grocery in order to minimize wastage of food.}
@@ -173,10 +176,10 @@
       {Developed an Agile board for an OOP-design cum refactoring exercise. The backend was implemented by incorporating various Design Patterns and best practices of Java, SpringMVC, and OOP. Also introduced a \href{https://github.com/nikhilsu/Agile-board/blob/master/src/main/java/com/prorg/helper/result/Response.java}{\emph{custom design pattern}}. \textbf{Links:}
       \href{https://prorg.herokuapp.com}{\textit{App}}, \href{https://github.com/nikhilsu/Agile-board}{\textit{GitHub}}.}
     \resumeSubItem{Object 3D Pose Estimation (Python, Tensorflow, C\#, Unity)}
-      {Using Neural Nets to deduce a dynamic object\rq s 3D location(x, y, z) and rotation(roll, pitch, yaw). This information is piped to an AR head-mounted display to generate real and virtual object interactions. \textbf{Links:}
-      \href{https://drive.google.com/file/d/1kCepKQxR73tUTLuvmd1YL3sIbj1GxDdc/view?usp=sharing}{\textit{Demo}}, \href{https://drive.google.com/file/d/1mRwSJ8p2-g-gtBGl1A8seRB8SojWQphm/view?usp=sharing}{\textit{Paper(Report)}}, \href{https://github.com/nikhilsu/Object-location-detection}{\textit{GitHub}}.}
+      {Using CNN to predict a dynamic object\rq s 3D location(x, y, z) and rotation(roll, pitch, yaw) to generate real and virtual object interactions in an AR-Headmount display. \textbf{Links:}
+      \href{https://drive.google.com/file/d/1kCepKQxR73tUTLuvmd1YL3sIbj1GxDdc/view?usp=sharing}{\textit{Demo}}, \href{https://drive.google.com/file/d/1mRwSJ8p2-g-gtBGl1A8seRB8SojWQphm/view?usp=sharing}{\textit{Paper}}, \href{https://github.com/nikhilsu/Object-location-detection}{\textit{GitHub}}.}
     \resumeSubItem{Navisys (Java, Android, Python, C++, OpenCV)}
-      {Designed an embedded system, fitted into a wearable jacket, that provided turn-by-turn navigation with dynamic obstacle detection to visually impaired users.  Output from the Ultrasonic sensors and image feed from a webcam was used to localize an obstacle. \textbf{Links:}
+      {Designed an embedded system, fitted into a wearable jacket, that provided turn-by-turn navigation with dynamic obstacle detection to visually impaired users. A CNN was later added to the system to increase performance by 20\%. \textbf{Links:}
       \href{https://drive.google.com/file/d/1bFHeZ7-7uwZ0spir3YQ7r0maWdLteEtu/view?usp=sharing}{\textit{Report}},
       \href{https://drive.google.com/file/d/1JWB67U2jjTG7cXZFVjRPVGKsv-rRhgUQ/view?usp=sharing}{\textit{Synopsis}}.}
     \resumeSubHeadingListEnd
@@ -185,6 +188,6 @@
 \section{Achievements}
 \vspace{-5pt}
   \resumeSubHeadingListStart
-    \resumePoint{'Best Research Undergrad Project' award at an IEEE Conference 2015. The project also featured in the \href{https://drive.google.com/open?id=0B0vNhKZyi8qyam1fQ3lfaE1hMkE}{\emph{newspaper(link)}}.}
+    \resumePoint{'Best Research Undergrad Project' award at IEEE Conference 2015. The project also featured in the \href{https://drive.google.com/open?id=0B0vNhKZyi8qyam1fQ3lfaE1hMkE}{\emph{newspaper(link)}}.}
   \resumeSubHeadingListEnd
 \end{document}
