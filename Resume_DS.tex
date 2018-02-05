@@ -1,0 +1,227 @@
+%-------------------------
+% Resume in Latex
+% Initial Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+\usepackage{xifthen}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.75in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-3pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \linespread{1}
+	\item\small{
+    	\textbf{#1}{: #2}
+  	}
+}
+
+\newcommand{\resumePoint}[1]{
+	\item\small{#1}
+}
+
+\newcommand{\resumeExperienceSubheading}[5]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \normalfont{\small#2} - \textbf{#3}\normalfont{#4} & #5 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubheadingExtended}[7]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textbf{\small#3} in \textit{#4}; \textbf{#5} & \textit{\small #6} 
+    \end{tabular*}
+    \ifthenelse{\isempty{#7}}%
+    {}% if #1 is empty
+    {\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#7}
+    \end{tabular*}
+    \vspace{-5pt}}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-6pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-12pt}}
+\newcommand{\resumeProjectItemListStart}{\begin{itemize}[leftmargin=*]\vspace{-4pt}}
+\newcommand{\resumeProjectItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\newcommand{\resumeInnerItemListStart}{\begin{itemize}\vspace{-1pt}}
+\newcommand{\resumeInnerItemListEnd}{\end{itemize}\vspace{2pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/nikhil-sulegaon/}{\Huge Nikhil Sulegaon}} & \faMapMarker \enspace 2995 Glenwood Dr APT 113 Boulder CO USA 80301\\[3pt]
+   \href{https://github.com/nikhilsu}{\faGithub \enspace https://github.com/nikhilsu} & \faEnvelopeO \enspace \href{mailto:nisu8311@colorado.edu}{nisu8311@colorado.edu} \\
+   \href{https://www.linkedin.com/in/nikhil-sulegaon/}{\faLinkedin \enspace https://www.linkedin.com/in/nikhil-sulegaon/} & \faPhone \enspace \href{tel:+1-720-491-9222}{+1-720-491-9222}
+   \vspace{-7pt}
+\end{tabular*}
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheadingExtended
+      {University of Colorado Boulder}{Boulder, CO}
+      {Master of Science}{Computer Science}{GPA: 3.8/4.0}{Aug 2017 -- Present (Expected: May 2019)}
+      {Relevant courses: Machine Learning, NLP, Probabilistic Models for ML, Computer Vision, and Big Data Architecture}
+    \resumeSubheadingExtended
+      {BMS College of Engineering}{Bangalore, India}
+      {Bachelor of Engineering}{Information Science and Engineering}{GPA: 8.92/10.0}{Sep 2011 -- May 2015}
+      {}
+  \resumeSubHeadingListEnd
+\vspace{-2pt}
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+    \setlength\itemsep{0em}
+    \item{
+     \textbf{Languages}{: Python, C\#, Java, Ruby, C++, C, MATLAB,  MS SQL Server, Postgres, MySQL, \& MongoDB..}
+    }
+    \item{
+     \textbf{Frameworks}{: Tensorflow, Keras, ASP.NET, Ruby on Rails, SpringMVC.}
+    }
+    \item{
+    \textbf{Data Science}}{: Neural Networks, KNN, SVM, KMeans, LSTM, Linear Regression, and, Probabilistic models.
+    }
+ \resumeSubHeadingListEnd
+
+%
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Object 3D Pose Estimation (Python, Tensorflow, C\#, Unity) {Links:}
+      \href{https://drive.google.com/file/d/1kCepKQxR73tUTLuvmd1YL3sIbj1GxDdc/view?usp=sharing}{\normalfont{\textit{Demo}}}, \href{https://drive.google.com/file/d/1mRwSJ8p2-g-gtBGl1A8seRB8SojWQphm/view?usp=sharing}{\normalfont{\textit{Paper}}}, \href{https://github.com/nikhilsu/Object-location-detection}{\normalfont{\textit{GitHub}}}}{
+      \resumeProjectItemListStart
+        \resumePoint{Using a CNN to predict an object\rq s 3D pose using its image to create real and virtual object interactions in a Hololens.}
+        \resumePoint{Tweaked the CNN to use a custom Tukey's Biweight Loss function thereby achieving a test accuracy of 95\%.
+        }
+      \resumeProjectItemListEnd
+    }
+    \resumeSubItem{Deception Detection in hotel reviews (Python, Sklearn, NLTK)}{
+        \resumeProjectItemListStart
+          \resumePoint{Implemented a Naive Bayes model and an SVM to detect deceptive or fake hotel reviews using a small dataset. }
+          \resumePoint{An SVM with Feature Engineering techniques achieved an accuracy of 64\% with a standard deviation of 5.2\%.
+          }
+        \resumeProjectItemListEnd
+    }
+    \resumeSubItem{Navisys (Java, Android, Python, C++, OpenCV) Links:
+      \href{https://drive.google.com/file/d/1bFHeZ7-7uwZ0spir3YQ7r0maWdLteEtu/view?usp=sharing}{\normalfont{\textit{Report}}},
+      \href{https://drive.google.com/file/d/1JWB67U2jjTG7cXZFVjRPVGKsv-rRhgUQ/view?usp=sharing}{{\normalfont{\textit{Synopsis}}}.}}
+      {
+        \resumeProjectItemListStart
+          \resumePoint{An embedded system fitted into a jacket that provides turn-by-turn navigation to the visually impaired.}
+          \resumePoint{Jacket also detected humans and obstacles using Ultrasonic sensors, \& Image processing techniques of Haar Cascades.
+          }
+        \resumeInnerItemListEnd
+      }\vspace{-2pt}
+    \resumeSubItem{Named Entity Recognition (Python, Sklearn, NLTK)}{
+        \resumeProjectItemListStart
+          \resumePoint{Achieved 93\% Accuracy and a 52\% F1 measure  when using a Perceptron to perform NER tagging of a sentence.}
+          \resumePoint{Implemented an HMM as a baseline model that was batch-trained by chuncking data due to large size of dataset.
+          }
+        \resumeProjectItemListEnd
+    }
+    \resumeSubItem{Handwritten Number Recognition (Python, Keras)}{
+        \resumeProjectItemListStart
+          \resumePoint{Used KNN(acc: 96\%), SVM(acc: 97\%), and CNN(acc: 98\%) models to recognize handwritten numerals.
+          }
+          \resumePoint{Different models were compared based on accuracy, precision, etc, using Cross Validation and L2 regularization.}
+        \resumeProjectItemListEnd
+    }
+    \resumeSubItem{Sentiment Analysis of Movie Reviews using IMDB dataset (Python, Keras)}{
+        \resumeProjectItemListStart
+          \resumePoint{Used Naive bayes with Laplace smoothing, SVM and RNNs to compare and contrast the performance of each model.
+          }
+          \resumePoint{Also analyzed and compared LSTMs and GRU for sequential prediction with pre-trained word embeddings (GloVe).
+          }
+        \resumeProjectItemListEnd
+    }
+    \resumeSubHeadingListEnd
+\vspace{3pt}
+%-------------------------------------------
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeExperienceSubheading
+      {Teaching Assistant}{\href{https://www.colorado.edu/cs/csci-3308-software-development-methods-and-tools}{(S/W Dev Methods \& Tools)}}{University of Colorado Boulder}{}{Sep 2017 - Present}
+      \resumeItemListStart
+        \vspace{2pt}
+          \resumePoint{Teaching 60 students, full stack development and deployment of applications using core Agile principles and TDD.
+      }
+      \vspace{-2pt}
+      \resumeItemListEnd
+    \resumeExperienceSubheading
+      {Application Developer}{}{ThoughtWorks}{, Bangalore, India}{Aug 2015 - Aug 2017}
+      \resumeItemListStart
+      \resumeItem {Food-Supplies Management - PoC (Python, SVM, Keras)}
+        {\resumeInnerItemListStart
+          \vspace{2pt}
+            \resumePoint{A tool built using ML, used to plan the amount of food to be prepared in order to reduce wastage in the office.}
+          \resumeInnerItemListEnd
+        }
+        \vspace{-2pt}
+      \resumeItem {Project Management Tool (C\#, Silverlight, ASP.NET)}
+          {\resumeInnerItemListStart
+            \resumePoint{A Multi-tenant SaaS application having about 2000 tenants and 2000-5000 users per tenant.}
+            \resumePoint {Spearheaded the re-architecture of the legacy application. Also increased the test coverage from 16\% to 65\%.}
+            \resumePoint {Optimized complex SQL queries to improve the performance of key features by around 80\%.}
+          \resumeInnerItemListEnd}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Achievements}
+  \resumeSubHeadingListStart
+    \resumePoint{'Best Research Project' award at the IEEE International Advance Computing Conference 2015, held at B.M.S College of Engineering. The project also featured in the \href{https://drive.google.com/open?id=0B0vNhKZyi8qyam1fQ3lfaE1hMkE}{\emph{newspaper(link)}} for its novel approach of implementation.}
+  \resumeSubHeadingListEnd
+\end{document}
