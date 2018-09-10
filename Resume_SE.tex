@@ -28,7 +28,7 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-0.65in}
+\addtolength{\topmargin}{-0.35in}
 \addtolength{\textheight}{1.2in}
 
 \urlstyle{same}
@@ -45,7 +45,7 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
-  \linespread{1.1}
+  \linespread{1.2}
   \item\small{
       \textbf{#1}{: #2}
     }
@@ -57,7 +57,7 @@
 }
 
 \newcommand{\resumeExperienceSubheading}[5]{
-  \vspace{-3pt}\item
+    \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} \normalfont{\small#2} - \textbf{#3}\normalfont{#4} & #5 \\
     \end{tabular*}\vspace{-4pt}
@@ -66,7 +66,8 @@
 \newcommand{\resumeSubheadingExtended}[7]{
   \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{#1} & #2 
+      \vspace{2pt} \\
       \textbf{\small#3} in \textit{#4}; \textbf{#5} & \textit{\small #6} 
     \end{tabular*}
     \ifthenelse{\isempty{#7}}%
@@ -74,7 +75,7 @@
     {\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \textit{\small#7}
     \end{tabular*}
-    \vspace{-5pt}}
+    }
 }
 
 
@@ -83,7 +84,7 @@
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-14pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
 \newcommand{\resumeInnerItemListStart}{\begin{itemize}\vspace{-1pt}}
@@ -100,15 +101,15 @@
   \textbf{\href{https://www.linkedin.com/in/nikhil-sulegaon/}{\Huge Nikhil Sulegaon}} & \faMapMarker \enspace 2995 Glenwood Dr APT 113 Boulder CO USA 80301\\[3pt]
    \href{https://github.com/nikhilsu}{\faGithub \enspace https://github.com/nikhilsu} & \faEnvelopeO \enspace \href{mailto:nisu8311@colorado.edu}{nisu8311@colorado.edu} \\
    \href{https://www.linkedin.com/in/nikhil-sulegaon/}{\faLinkedin \enspace https://www.linkedin.com/in/nikhil-sulegaon/} & \faPhone \enspace \href{tel:+1-720-491-9222}{+1-720-491-9222}
-   \vspace{-8pt}
+   
 \end{tabular*}
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheadingExtended
       {University of Colorado Boulder}{Boulder, CO}
-      {Master of Science}{Computer Science}{GPA: 3.8/4.0}{Aug 2017 -- Present (Expected: May 2019)}
-      {Relevant courses: Machine Learning, NLP, Probabilistic Models for ML, Computer Vision, and, Object Oriented Design.}
+      {Master of Science}{Computer Science}{GPA: 3.83/4.0}{Aug 2017 -- Present (Expected: May 2019)}
+      {Relevant courses: BigData, ML, NLP, Probabilistic Models for ML, Computer Vision, and, Object Oriented Design.}
     \resumeSubheadingExtended
       {BMS College of Engineering}{Bangalore, India}
       {Bachelor of Engineering}{Information Science and Engineering}{GPA: 8.92/10.0}{Sep 2011 -- May 2015}
@@ -121,7 +122,7 @@
  \resumeSubHeadingListStart
     \setlength\itemsep{0em}
     \item{
-     \textbf{Languages}{: Python, C\#, Java, Ruby, C++, C, PHP, MATLAB, and NodeJs.}
+     \textbf{Languages}{: Python, C\#, Java, Scala, Ruby, C++, C, PHP, MATLAB, and NodeJs.}
     }
     \item{
      \textbf{Frameworks}{: Tensorflow, Keras, ASP.NET, Flask, Ruby on Rails, SpringMVC, ReactJs with Redux.}
@@ -130,7 +131,7 @@
      \textbf{Databases}{: MS SQL Server, Postgres, MySQL, and MongoDB.}
     }
     \item{
-     \textbf{Others}{: Android, Git, AWS, Heroku, CI, Docker, HTML/CSS, JavaScript, Shell scripting, and Powershell.}
+     \textbf{Others}{: Spark, Kafka, Redis, AWS(Lamba, EMR, EC2), Heroku, Qubole, CI, Docker.}
     }
  \resumeSubHeadingListEnd
 
@@ -139,6 +140,12 @@
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
+  \resumeExperienceSubheading
+      {SDE Intern}{(Data Engineering)}{Expedia Inc}{, Chicago, USA}{May 2018 - Aug 2018}
+      \resumeItemListStart
+          \resumePoint{Productionalized a price recommendation ML algorithm using technologies like Qubole, Spark and AWS Lambda.}
+          \resumePoint{Contributed to the ideation and implementation of restructuring the existing data pipeline for performance.}
+      \resumeItemListEnd
     \resumeExperienceSubheading
       {Teaching Assistant}{\href{https://www.colorado.edu/cs/csci-3308-software-development-methods-and-tools}{(S/W Dev Methods \& Tools)}}{University of Colorado Boulder}{}{Sep 2017 - Present}
       \resumeItemListStart
@@ -171,10 +178,13 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
+  \resumeSubItem{SparkBusters (Java, Spark, Kafka, Redis)}
+      {A big-data project that performed Opinion mining on tweets of a commercial product. These opinions were visualized on a Map based on the sentiment score. \textbf{Links:}
+      \href{https://drive.google.com/file/d/1zUeC4FPc74mw2Z6SB1qXauo8p6Ex2Cc9/view?usp=sharing}{\textit{Demo}},  \href{https://github.com/nikhilsu/SparkBusters}{\textit{GitHub}}.}
     \resumeSubItem{Object 3D Pose Estimation (Python, Tensorflow, C\#, Unity)}
       {Using a Convolutional Neural Network to predict an object\rq s 3D pose to generate real and virtual object interactions in a Hololens. \textbf{Links:}
       \href{https://drive.google.com/file/d/1kCepKQxR73tUTLuvmd1YL3sIbj1GxDdc/view?usp=sharing}{\textit{Demo}}, \href{https://drive.google.com/file/d/1mRwSJ8p2-g-gtBGl1A8seRB8SojWQphm/view?usp=sharing}{\textit{Paper}}, \href{https://github.com/nikhilsu/Object-location-detection}{\textit{GitHub}}.}
-      \resumeSubItem{Agile board (Java, SpringMVC)}
+    \resumeSubItem{Agile board (Java, SpringMVC)}
       {A web based Agile board developed for an OOP-design cum refactoring exercise. Devised a \href{https://github.com/nikhilsu/Agile-board/blob/master/src/main/java/com/prorg/helper/result/Response.java}{\emph{custom design pattern}} as part of the project implementation. \textbf{Links:}
       \href{https://prorg.herokuapp.com}{\textit{App}}, \href{https://github.com/nikhilsu/Agile-board}{\textit{GitHub}}.}
     \resumeSubItem{Navisys (Java, Android, Python, C++, OpenCV)}
@@ -188,6 +198,7 @@
 \vspace{5pt}
 \section{Achievements}
   \resumeSubHeadingListStart
+    \resumePoint{'Outstanding Teaching Assistant' award for having the best Faculty Course Questionnaire(FCQ) scores in the Computer Science department of the University of Colorado Boulder for the academic year 2017-2018.}
     \resumePoint{'Best Research Project' award at the IEEE International Advance Computing Conference 2015, held at B.M.S College of Engineering. The project also featured in the \href{https://drive.google.com/open?id=0B0vNhKZyi8qyam1fQ3lfaE1hMkE}{\emph{newspaper(link)}} for its novel approach of implementation.}
   \resumeSubHeadingListEnd
 \end{document}
